@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+.head a p{
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    margin: auto 50px;
+}
+
+header{
+    width: 100%;
+    }
+    .head{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    border: 3px solid rgba(128,128,128,0.2);
+}
+
+.white{
+  width:50px;
+   height:30px;
+    cursor: pointer;
+}
+.back-button{
+    margin: 50px 50px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgba(62, 60, 60, 0.4);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.4);
+}
+.back-button img{
+    width: 20px;
+}
+.back-button span{
+    margin-left: 8px;
+}
+.flagimage{
+    width: 550px;
+    height: 400px;
+    margin-left: 20px;
+}
+.country-info{
+    /* position: relative; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+}
+.country-info h5{
+    padding-block: 7px;
+}
+.country-name{
+    margin-bottom: 15px;
+}
+.country-demography{
+    margin-inline:80px;
+    margin-block: 80px;
+}
+.TCL{
+    margin-inline:100px;
+    margin-block: 130px;
+}
+.border-countries{
+display: flex;
+flex-direction: column;
+   }
+.white-moon{
+    height: 20px;
+    width: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    }
+ .white{
+        width:20px;
+         height:20px;
+          cursor: pointer;
+    margin-right: 10px;
+      }
+.border-countries a{
+    text-decoration-line: none;
+    color: gray;
+}
+h5 span{
+    color: gray;
+  }
+.border-countries span{
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.4);
+}
+.border-countries-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+}
+
+.border-country-link {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures overflow is hidden */
+    text-overflow: ellipsis; /* Shows ellipsis (...) when text overflows */
+    margin-right: 8px; /* Adjust margin as needed */
+}
+
+main>a{
+    text-decoration-line: none;
+    color: gray;
+}
+@media (width <=760px) {
+   
+    .country-info{
+        flex-direction: column;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .country-demography{
+        margin-block: 50px;
+    }
+    .TCL{
+        margin: 0;
+        margin-left: 70px;
+    }
+    .border-countries{
+        bottom: -50px;
+    }
+}
+
+@media (max-width:530px) {
+    html{
+        overflow-y: hidden;
+    }
+
+.country-demography{
+    margin-inline: -78px;
+}
+.TCL{
+    margin-left: -76px;
+}
+.flag{
+    margin-inline: -128px;
+    margin-block: -100px;
+}
+
+.head a p{
+    margin-inline: 112px;
+    font-size: 28px;
+    text-wrap: nowrap;
+  }
+.flagimage{
+    width: 339px;
+    margin:0;
+}
+.white{
+        margin-right: 189px;
+    margin-bottom: -30px;
+}
+
+.border-countries{
+    position: relative;
+    left: -60px;
+}
+}
