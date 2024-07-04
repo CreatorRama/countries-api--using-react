@@ -1,13 +1,12 @@
 {
-  "homepage": "https://github.com/CreatorRama/countries-api--using-react",
   "name": "countries-api-using-react",
   "version": "1.0.0",
-  "private": "false",
+  "homepage": "https://creatorrama.github.io/countries-api--using-react",
+  "private": false,
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --dist-dir dist --public-url ./",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -15,8 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.12.0",
-    "process": "^0.11.10"
+    "parcel": "^2.12.0"
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
