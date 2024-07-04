@@ -1,41 +1,47 @@
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./app";
 import Contact from "./components/contact";
 import Home from "./components/home";
 import Error from "./components/error";
 import Countrydetails from "./components/Countrydetails";
-import leftarrow from '/assets/left-arrow.png'
-import './country.css'
+import leftarrow from './assets/left-arrow.png'; // Adjusted path for asset import
+import './country.css';
 
+const basename = '/countries-api--using-react'; // Replace with your GitHub repository name
 
-
-const router = createBrowserRouter([
+const router = createBrowserRouter({
+  basename: basename, // Set the basename for correct routing
+  routes: [
     {
       path: "/",
       element: <App />,
-      children:[
+      children: [
         {
-          path: "/",
-      element: <Home />,
+          path: "/", // This should render Home component when path is "/"
+          element: <Home />,
         },
         {
-          path: "/contact/",
-      element: <Contact />,
+          path: "/contact", // This should render Contact component when path is "/contact"
+          element: <Contact />,
         },
         {
-          path: "/:country",
-      element: <Countrydetails imageurl={leftarrow} />,
+          path: "/:country", // Dynamic route parameter for country
+          element: <Countrydetails imageurl={leftarrow} />, // Render Countrydetails with passed props
         },
         {
-          path: "*",
-      element: <Error />
-        },      
-      ]
+          path: "*", // Catch-all route for any other paths not matched
+          element: <Error />,
+        },
+      ],
     },
-   
-  ]);
+  ],
+});
 
-const root=createRoot(document.querySelector("#root"))
+const root = createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={router} />)
+root.render(
+  <RouterProvider router={router}>
+    <App />
+  </RouterProvider>
+);
