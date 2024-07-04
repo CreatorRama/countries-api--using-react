@@ -10,32 +10,28 @@ import './country.css';
 
 const basename = '/countries-api--using-react'; // Replace with your GitHub repository name
 
+const routes = [
+  {
+    path: "/", // This should render Home component when path is "/"
+    element: <Home />,
+  },
+  {
+    path: "/contact", // This should render Contact component when path is "/contact"
+    element: <Contact />,
+  },
+  {
+    path: "/:country", // Dynamic route parameter for country
+    element: <Countrydetails imageurl={leftarrow} />, // Render Countrydetails with passed props
+  },
+  {
+    path: "*", // Catch-all route for any other paths not matched
+    element: <Error />,
+  },
+];
+console.log(routes);
 const router = createBrowserRouter({
-  basename: basename, // Set the basename for correct routing
-  routes: [
-    {
-      path: "/countries-api--using-react",
-      element: <App />,
-      children: [
-        {
-          path: "/", // This should render Home component when path is "/"
-          element: <Home />,
-        },
-        {
-          path: "/contact", // This should render Contact component when path is "/contact"
-          element: <Contact />,
-        },
-        {
-          path: "/:country", // Dynamic route parameter for country
-          element: <Countrydetails imageurl={leftarrow} />, // Render Countrydetails with passed props
-        },
-        {
-          path: "*", // Catch-all route for any other paths not matched
-          element: <Error />,
-        },
-      ],
-    },
-  ],
+  basename: basename,
+  routes: routes,
 });
 
 const root = createRoot(document.getElementById("root"));
