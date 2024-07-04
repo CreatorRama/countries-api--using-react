@@ -8,10 +8,10 @@ import Countrydetails from "./components/Countrydetails";
 import leftarrow from './assets/left-arrow.png'; // Adjusted path for asset import
 import './country.css';
 
-const basename = '/countries-api--using-react'; // Replace with your GitHub repository name
+// const basename = '/countries-api--using-react'; // Replace with your GitHub repository name
 
 const router = createBrowserRouter({
-  basename: basename, // Set the basename for correct routing
+  // basename: basename, // Set the basename for correct routing
   routes: [
     {
       path: "/",
